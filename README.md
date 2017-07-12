@@ -85,12 +85,13 @@ require('router')(websrv.router);
 > router.js
 
 ```javascript
-router
-    .get('a', func_a)
-    .post('b/:id', func_b)
-    .put('c/:id', func_c)
-    .del('d/:id', func_d)
-
+module.exports =  (router) => {
+    router
+        .get('a', func_a)
+        .post('b/:id', func_b)
+        .put('c/:id', func_c)
+        .del('d/:id', func_d)
+}
 ```
 
 ### Koa框架使用
