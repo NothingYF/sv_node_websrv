@@ -13,8 +13,8 @@ npm install sv_node_websrv
 ## 使用示例
 
 ```javascript
-const websrv = require('../index')('/example/');
-const debug = require('debug')('websrv');
+const websrv = require('sv_node_websrv')('/example/');
+const debug = require('debug')('websrv:example');
 
 //加载中间件
 websrv.use(async(ctx, next)=> {
