@@ -94,5 +94,10 @@ module.exports =  (router) => {
 }
 ```
 
-### Koa框架使用
-详见 [koa](http://koajs.com/)
+
+### 系统依赖组件
+
+- [koa](http://koajs.com/)
+- [koa-router](https://www.npmjs.com/package/koa-router)
+- [koa-bodyparser](https://www.npmjs.com/package/koa-bodyparser)
+- [sv_node_share](https://git.scsv.online/node-public/sv_node_share)
