@@ -48,7 +48,7 @@ setInterval(()=>
 
 > 请求
 
-```
+```javascript
 curl http://localhost:9000/example/test
 
 ```
@@ -56,7 +56,7 @@ curl http://localhost:9000/example/test
 
 > 输出:
 
-```
+```javascript
 [2017-07-12 10:51:59.086] [INFO] websrv - Server start, listening on port 9000
 [2017-07-12 10:52:02.120] [INFO] websrv - GET /example/test
   websrv hello +3s
