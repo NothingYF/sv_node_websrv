@@ -10,7 +10,9 @@ node web service with koa
 npm set registry http://npm.scsv.online
 
 npm adduser --registry http://npm.scsv.online
-$ user/passwd: scsv/scsv
+$ Username: scsv
+$ Password: scsv
+$ Email: scsv@scsv.online
 
 npm install sv_node_websrv --save
 ```
