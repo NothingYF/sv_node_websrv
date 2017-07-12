@@ -6,13 +6,11 @@ node web service with koa
 
 需要node v7.6.0以上版本支持
 
-```
+```javascript
 npm install sv_node_websrv
 ```
 
 ## 使用示例
-
----
 
 ```javascript
 const websrv = require('../index')('/example/');
@@ -35,6 +33,13 @@ websrv.start(9000);
 
 //打印性能日志
 setInterval(()=> debug(websrv.perf.value()), 10000);
+```
+
+> 输出:
+
+```
+[2017-07-12 10:51:59.086] [INFO] websrv - Server start, listening on port 9000
+[2017-07-12 10:52:59.066] [INFO] websrv:perf - { tpmc: 17, input: 0, output: 238, art: '0.3' }
 ```
 
 ## 中间件
