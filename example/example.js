@@ -19,3 +19,6 @@ websrv.router.get('test', async(ctx, next) =>{
 //启动服务
 websrv.start(9000);
 
+
+//打印性能日志
+setInterval(()=> debug(websrv.perf.value()), 10000);
