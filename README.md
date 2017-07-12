@@ -7,6 +7,11 @@ node web service with koa
 需要node v7.6.0以上版本支持
 
 ```javascript
+npm set registry http://npm.scsv.online
+
+npm adduser --registry http://npm.scsv.online
+$ user/passwd: scsv/scsv
+
 npm install sv_node_websrv --save
 ```
 
