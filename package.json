@@ -1,6 +1,6 @@
 {
   "name": "sv_node_websrv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An web server library for node.js.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NothingYF/sv_node_websrv.git"
+    "url": "https://git.scsv.online/node-public/sv_node_websrv.git"
   },
   "keywords": [
     "sv_node_websrv"
@@ -16,7 +16,7 @@
   "author": "NothingYF",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NothingYF/sv_node_websrv/issues"
+    "url": "https://git.scsv.online/node-public/sv_node_websrv/issues"
   },
   "dependencies": {
     "koa": "^2.3.0",
