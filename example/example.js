@@ -21,4 +21,4 @@ websrv.start(9000);
 
 
 //打印性能日志
-setInterval(()=> debug(websrv.perf.value()), 10000);
+setInterval(()=> debug(websrv.perf.value()), 60000);
