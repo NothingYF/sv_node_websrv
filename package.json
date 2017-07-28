@@ -1,6 +1,6 @@
 {
   "name": "sv_node_websrv",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "An web server library for node.js.",
   "main": "index.js",
   "scripts": {
