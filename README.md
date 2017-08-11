@@ -29,9 +29,15 @@ websrv.use(async(ctx, next)=> {
     await next();
 });
 
+//路由
 websrv.router.get('test', async(ctx, next) =>{
     debug('route test ok');
     JR(ctx, 'route test ok\n');
+});
+
+//消息响应过滤器
+websrv.filter(async(ctx, next)=>{
+   debug('filter output:', ctx.status, ctx.body);
 });
 
 //启动服务

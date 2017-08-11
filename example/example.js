@@ -16,9 +16,13 @@ websrv.router.get('test', async(ctx, next) =>{
     JR(ctx, 'route test ok\n');
 });
 
+websrv.filter(async(ctx, next)=>{
+   debug('filter', ctx.status);
+});
+
 //启动服务
 websrv.start(9000);
 
 
 //打印性能日志
-setInterval(()=> debug(websrv.perf.value()), 60000);
+//setInterval(()=> debug(websrv.perf.value()), 60000);
