@@ -16,6 +16,11 @@ websrv.router.get('test', async(ctx, next) =>{
     JR(ctx, 'route test ok\n');
 });
 
+websrv.router.post('test', async(ctx, next) =>{
+    debug('route test ok');
+    JR(ctx);
+});
+
 websrv.filter(async(ctx, next)=>{
    debug('filter', ctx.status);
 });
