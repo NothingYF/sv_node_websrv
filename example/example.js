@@ -5,6 +5,15 @@
 const websrv = require('../index')('/example/');
 const debug = require('debug')('websrv');
 
+//日志回调
+websrv.on('log', (...msg)=>{
+    debug('weblog: ', msg.join(' '));
+});
+
+websrv.on('error', (err)=>{
+    debug(err);
+});
+
 //加载中间件
 websrv.use(async(ctx, next)=> {
     debug('hello');
@@ -17,8 +26,7 @@ websrv.router.get('test', async(ctx, next) =>{
 });
 
 websrv.router.post('test', async(ctx, next) =>{
-    debug('route test ok');
-    JR(ctx);
+    ER(ctx, new Error('test error'));
 });
 
 websrv.filter(async(ctx, next)=>{
