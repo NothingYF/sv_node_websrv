@@ -3,25 +3,16 @@
  */
 
 const websrv = require('../index')('/example/');
-const debug = require('debug')('websrv');
-
-//日志回调
-websrv.on('log', (...msg)=>{
-    debug('weblog: ', msg.join(' '));
-});
-
-websrv.on('error', (err)=>{
-    debug(err);
-});
+const logger = require('sv_node_share').logger('example');
 
 //加载中间件
 websrv.use(async(ctx, next)=> {
-    debug('hello');
+    logger.debug('hello');
     await next();
 });
 
 websrv.router.get('test', async(ctx, next) =>{
-    debug('route test ok');
+    logger.debug('route test ok');
     JR(ctx, 'route test ok\n');
 });
 
@@ -30,7 +21,7 @@ websrv.router.post('test', async(ctx, next) =>{
 });
 
 websrv.filter(async(ctx, next)=>{
-   debug('filter', ctx.status);
+    logger.debug('filter', ctx.status);
 });
 
 //启动服务
