@@ -1,6 +1,6 @@
 {
   "name": "sv_node_websrv",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "An web server library for node.js.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
-    "sv_node_share": "^1.1.8"
+    "sv_node_share": "^1.1.9"
   },
   "devDependencies": {
     "env-test": "^1.0.0",
