@@ -24,25 +24,20 @@ websrv.router.post('test', async(ctx, next) =>{
 });
 
 websrv.on('log', (level, msg)=>{
-   switch (level){
-       case LOG_LEVELS.DEBUG:
-           weblog.debug(msg);
-           break;
-       case LOG_LEVELS.INFO:
-           weblog.info(msg);
-           break;
-       case LOG_LEVELS.WARN:
-           weblog.warn(msg);
-           break;
-       default:
-           weblog.error(msg);
-           break;
-   }
+   weblog.log(level, msg);
+});
+
+websrv.on('error', (err)=>{
+    weblog.error(err);
 });
 
 //启动服务
 websrv.start(9000);
 
+// (async()=>{
+//     let a = 0;
+//     websrv.test('test');
+// })();
 
 //打印性能日志
 //setInterval(()=> debug(websrv.perf.value()), 60000);
