@@ -1,6 +1,6 @@
 {
   "name": "sv_node_websrv",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "An web server library for node.js.",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "url": "https://git.scsv.online/node-public/sv_node_websrv/issues"
   },
   "dependencies": {
+    "kcors": "^2.2.1",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
