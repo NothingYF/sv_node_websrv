@@ -31,6 +31,14 @@ websrv.on('error', (err)=>{
     weblog.error(err);
 });
 
+websrv.wsrouter.get('log/:id', async(ctx, next) =>{
+    logger.debug('wsroute log ' + ctx.params.id);
+    ctx.websocket.on('message', (message) => {
+        logger.debug(message);
+        ctx.websocket.send(ctx.params.id + ': ' + message);
+    });
+});
+
 //启动服务
 websrv.start(9000);
 
