@@ -32,10 +32,13 @@ websrv.on('error', (err)=>{
 });
 
 websrv.wsrouter.get('log/:id', async(ctx, next) =>{
-    logger.debug('wsroute log ' + ctx.params.id);
+    logger.debug('websocket connect: ' + ctx.params.id);
     ctx.websocket.on('message', (message) => {
         logger.debug(message);
         ctx.websocket.send(ctx.params.id + ': ' + message);
+    });
+    ctx.websocket.on('close', ()=>{
+        logger.debug('websocket closed');
     });
 });
 
