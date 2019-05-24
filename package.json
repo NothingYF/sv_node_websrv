@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NothingYF/sv_node_share.git"
+    "url": "https://github.com/NothingYF/sv_node_websrv.git"
   },
   "keywords": [
     "sv_node_websrv"
@@ -16,7 +16,7 @@
   "author": "NothingYF",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NothingYF/sv_node_share/issues"
+    "url": "https://github.com/NothingYF/sv_node_websrv/issues"
   },
   "dependencies": {
     "kcors": "^2.2.1",
